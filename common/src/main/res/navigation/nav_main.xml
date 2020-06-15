@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.jemmycalak.splash.SplashFragment">
+        <action
+            android:id="@+id/splash_to_listOrder"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"
+            app:destination="@id/listOrderProductFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/listOrderProductFragment"
+        android:name="com.jemmycalak.product.ui.ListOrderProductFragment">
+        <action
+            android:id="@+id/listOrderProduct_to_detailProduct"
+            app:destination="@id/detailProduct">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailProduct"
+        android:name="com.jemmycalak.product.DetailProductFragment">
+
+    </fragment>
+</navigation>

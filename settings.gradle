@@ -1,0 +1,9 @@
+include ':app',
+        ':common',
+        ':data:local',
+        ':data:network',
+        ':data:model',
+        ':features:listorder',
+        ':features:splash',
+        ':features:detailproduct'
+rootProject.name = "Qasir"
